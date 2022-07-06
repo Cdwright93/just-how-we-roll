@@ -25,7 +25,6 @@ const getRandomNumber = function (max) {
 function getCurrDice(caller) {
   if (caller == 6) {
     let roll = sixes[sixes.length - 1];
-    console.log(roll);
     document.querySelector("#d6-roll").src = `images/d6/${roll}.png`;
     averageAnyRolls(sixes);
     document.querySelector("#d6-rolls-mean").innerHTML = `${averageAnyRolls(
@@ -35,7 +34,6 @@ function getCurrDice(caller) {
   if (caller == 12) {
     let roll1 = doubleSixes[doubleSixes.length - 1];
     let roll2 = doubleSixes[doubleSixes.length - 2];
-    console.log(roll1, roll2);
     document.querySelector("#double-d6-roll-1").src = `images/d6/${roll1}.png`;
     document.querySelector("#double-d6-roll-2").src = `images/d6/${roll2}.png`;
     averageAnyRolls(doubleSixes);
@@ -45,7 +43,6 @@ function getCurrDice(caller) {
   }
   if (caller == 24) {
     let roll = twelves[twelves.length - 1];
-    console.log(roll);
     document.querySelector("#d12-roll").src = `images/numbers/${roll}.png`;
     averageAnyRolls(twelves);
     document.querySelector("#d12-rolls-mean").innerHTML = `${averageAnyRolls(
@@ -54,7 +51,6 @@ function getCurrDice(caller) {
   }
   if (caller == 20) {
     let roll = twenties[twenties.length - 1];
-    console.log(roll);
     document.querySelector("#d20-roll").src = `images/numbers/${roll}.png`;
     averageAnyRolls(twenties);
     document.querySelector("#d20-rolls-mean").innerHTML = `${averageAnyRolls(
