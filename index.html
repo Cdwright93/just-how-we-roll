@@ -8,11 +8,11 @@
     <link rel="stylesheet" type="text/css" media="screen" href="style.css">
 </head>
 <body>
-    <section id="app">
+    <!--need to add a conditional statement for die rolls.-->    <section id="app">
         <section id="d6" class="roll-section single-die">
             <section id="d6-button">
                 <h3>Click The Die To Roll</h3>
-                <img class="d6 roll" id="d6-roll">
+                <img class="d6 roll" src="images/start/d6.png"id="d6-roll" onclick="d6rollFunction()">
             </section>
             <section id="d6-averages">
                 <h3>Mean</h3>
@@ -25,8 +25,10 @@
                     <h3>Click The Dice To Roll</h3>
                 </header>
                 <main>
-                    <img class="d6 roll" id="double-d6-roll-1">
-                    <img class="d6 roll" id="double-d6-roll-2">
+                    <img class="d6 roll" src="images/start/d6.png"
+                    id="double-d6-roll-1">
+                    <img class="d6 roll"src="images/start/d6.png" id="double-d6-roll-2">
+                    <button id ="double-roll-btn"type="submit" onclick="doubleD6rollFunction()">Roll</button>
                 </main>
             </section>
             <section id="double-d6-averages">
@@ -37,7 +39,7 @@
         <section id="d12" class="roll-section single-die">
             <section id="d12-button">
                 <h3>Click The Die To Roll</h3>
-                <img class="roll" src="" id="d12-roll">
+                <img class="roll" src="images/start/d12.jpeg" id="d12-roll" onclick="d12RollFunction()">
             </section>
             <section id="d12-averages">
                 <h3>Mean</h3>
@@ -47,14 +49,15 @@
         <section id="d20" class="roll-section single-die">
             <section id="d20-button">
                 <h3>Click The Die To Roll</h3>
-                <img class="roll" src="" id="d20-roll">
+                <img class="roll" src="images/start/d20.jpg" id="d20-roll" onclick="d20RollFunction()">
             </section>
             <section id="d20-averages">
                 <h3>Mean</h3>
                 <h3 id="d20-rolls-mean"></h3>
             </section>
         </section>
-        <button id="reset-button">Reset All Rolls</button>
+        <!--add a reset() function to the reset button-->
+        <button id="reset-button" onclick="resetAll()">Reset All Rolls</button>
     </section>
     <script src="main.js"></script>
 </body>
